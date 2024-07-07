@@ -16,7 +16,7 @@ O objetivo deste projeto é desenvolver um agente inteligente capaz de aprender 
 ## Como executar
 
 1. Clone este repositório em sua máquina local.
-2. Abra o arquivo `main.py` em um ambiente de desenvolvimento Python.
+2. Abra o arquivo `client.py` em um ambiente de desenvolvimento Python.
 3. Execute o arquivo para iniciar o treinamento do agente.
 4. Acompanhe o progresso do treinamento e os resultados obtidos.
 
