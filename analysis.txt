@@ -1,0 +1,45 @@
+lr: 1.0
+gamma: 1.0
+exploration_proba: 1.0
+Mean reward per episode
+mean episode reward: -2331.0
+mean episode reward: -2469.0
+mean episode reward: -2228.0
+mean episode reward: -2452.0
+mean episode reward: -2561.0
+mean episode reward: -3309.0
+mean episode reward: -3050.0
+mean episode reward: -1786.0
+mean episode reward: -2594.0
+mean episode reward: -2488.0
+lr: 1.0
+gamma: 1.0
+exploration_proba: 0.9
+Mean reward per episode
+mean episode reward: -2355.0
+mean episode reward: -2576.0
+mean episode reward: -1760.0
+mean episode reward: -2946.0
+mean episode reward: -2624.0
+mean episode reward: -2183.0
+mean episode reward: -1940.0
+mean episode reward: -2289.0
+mean episode reward: -2140.0
+mean episode reward: -2365.0
+lr: 1.0
+gamma: 1.0
+exploration_proba: 0.9
+Mean reward per episode
+mean episode reward: -2373.0
+mean episode reward: -2727.0
+mean episode reward: -2752.0
+mean episode reward: -2183.0
+mean episode reward: -2767.0
+mean episode reward: -2492.0
+mean episode reward: -1532.0
+mean episode reward: -2204.0
+mean episode reward: -2181.0
+mean episode reward: -2026.0
+lr: 1.0
+gamma: 1.0
+exploration_proba: 0.9
