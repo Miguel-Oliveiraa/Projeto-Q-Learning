@@ -54,7 +54,7 @@ def main():
         n_episodes = 10
 
         #maximum of iteration per episode
-        iter_per_episode = 100
+        iter_per_episode = 10000
         # Loop until lr reaches 0
         while lr >= 0:
             while gamma >= 0:

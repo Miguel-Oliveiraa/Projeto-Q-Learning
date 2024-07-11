@@ -7,21 +7,6 @@ def move(Q, exploration_proba, state_code):
         return np.random.choice([0, 1, 2])
     return np.argmax(Q[state_code, :])
 
-def append_to_file(content):
-    with open("analysis.txt", "a") as file:
-        file.write(content + "\n")
-
-def print_values(lr, gamma, exploration_proba):
-    content = f"lr: {lr:.1f}\ngamma: {gamma:.1f}\nexploration_proba: {exploration_proba:.1f}"
-    append_to_file(content)
-
-def print_rewards(rewards_per_episode):
-    append_to_file("Mean reward per episode")
-    for i in range(10):
-        mean_reward = np.mean(rewards_per_episode[i])
-        content = f"mean episode reward: {mean_reward}"
-        append_to_file(content)
-
 def main():
     # Connect
     c = cn.connect(2037)
@@ -34,18 +19,17 @@ def main():
             Q = np.zeros([24 * 4, 3])
         
         #initialize the exploration probability to 1
-        exploration_proba = 0.2
+        exploration_proba = 0.1
 
         #discounted factor
-        gamma = 0.6
+        gamma = 0.95
 
         #learning rate
-        lr = 0.9
+        lr = 0.7
         
         moves = ["left", "right", "jump"]
         acao = 2
 
-        print_values(lr, gamma, exploration_proba)
         state, reward = cn.get_state_reward(c, "")
         plataforma = int(state[2:6], 2)
         direction = int(state[-2:], 2)
