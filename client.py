@@ -19,13 +19,13 @@ def main():
             Q = np.zeros([24 * 4, 3])
         
         #initialize the exploration probability to 1
-        exploration_proba = 0.1
+        exploration_proba = 0 # 0.15 During Training
 
         #discounted factor
-        gamma = 0.95
+        gamma = 0.0005 # 0.95 During Training
 
         #learning rate
-        lr = 0.7
+        lr = 0.01 # 0.8 During Training
         
         moves = ["left", "right", "jump"]
         acao = 2
@@ -52,7 +52,7 @@ def main():
 
             # Update Q-table
             Q[state_code, acao] = (1 - lr) * Q[state_code, acao] + lr * (reward + gamma * np.max(Q[next_state_code, :]))              
-            np.savetxt('resultado.txt', Q)
+            # np.savetxt('resultado.txt', Q)
 
             total_episode_reward = total_episode_reward + reward
             # Update state
