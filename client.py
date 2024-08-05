@@ -5,7 +5,7 @@ import numpy as np
 def move(Q, exploration_proba, state_code):
     if np.random.uniform(0,1) < exploration_proba:
         return np.random.choice([0, 1, 2])
-    return np.argmax(Q[state_code, :])
+    return np.argmax(Q[state_code])
 
 def main():
     # Connect
@@ -31,7 +31,7 @@ def main():
         acao = 2
 
         state, reward = cn.get_state_reward(c, "")
-        plataforma = int(state[2:6], 2)
+        plataforma = int(state[2:7], 2)
         direction = int(state[-2:], 2)
         total_episode_reward = 0
         # Game
@@ -45,8 +45,8 @@ def main():
             
             # Executa ação e recebe state e reward
             next_state, reward = cn.get_state_reward(c, moves[acao])
-            next_state_code = int(next_state, 2)            
-            plataforma = int(next_state[2:6], 2)
+            next_state_code = int(next_state, 2)          
+            plataforma = int(next_state[2:7], 2)
             direction = int(next_state[-2:], 2)
             print("Ação efetuada: " + moves[acao] + "\nnew state: "+next_state+"\nPlataforma: " + str(plataforma)+"\nDireção: " + str(direction)+"\nreward: "+str(reward)+"\n")
 
