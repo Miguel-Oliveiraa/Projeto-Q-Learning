@@ -19,10 +19,10 @@ def main():
             Q = np.zeros([24 * 4, 3])
         
         #initialize the exploration probability to 1
-        exploration_proba = 0 # 0.15 During Training
+        exploration_proba = 0 # 0.2 During Training
 
         #discounted factor
-        gamma = 0.0005 # 0.95 During Training
+        gamma = 0.5 # 0.95 During Training
 
         #learning rate
         lr = 0.01 # 0.8 During Training
